@@ -1,38 +1,20 @@
+"use client"
+
+import { Person } from "@/components/Person";
 
 function Home() {
   return (
-    <div>
-      <h1>Registration Form</h1>
-      <form action="" method="get">
-        <fieldset>
-          <legend>Data</legend>
-          <label htmlFor="first-name">First Name:
-            <input type="text" name="first-name" id="first-name" placeholder="First Name"/>
-          </label>
-          <label htmlFor="last-name">Last Name:
-            <input type="text" name="last-name" id="last-name" placeholder="Last Name"/>
-          </label>
-          <label htmlFor="email">Email:
-            <input type="email" name="email" id="email" placeholder="Email"/>
-          </label>
-          <label htmlFor="tel">Telephone:
-            <input type="tel" name="tel" id="tel" placeholder="Telephone"/>
-          </label>
-        </fieldset>
-        <fieldset>
-          <legend>Location</legend>
-          <label htmlFor="address">Address:
-            <input type="text" name="address" id="address" placeholder="Address"/>
-          </label>
-          <label htmlFor="country">Country:
-            <input type="text" name="country" id="country" />
-          </label>
-          <label htmlFor="nationality">Nationality:
-            <input type="text" name="nationality" id="nationality" placeholder="Nationality"/>
-          </label>
-        </fieldset>
-        <button type="submit">Submit</button>
-      </form>
+    <div className="w-screen h-screen flex flex-col justify-center items-center bg-teal-900 text-white">
+      <div className="flex flex-col items-center w-full max-w-96 h-auto p-4 bg-gray-700 rounded-md bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-70 border border-gray-400">
+        <h1 className="mb-2 text-white capitalize">login</h1>
+        <form action="" method="get" className="flex flex-col">
+          <Person/>
+          <button type="submit" className="z-40 w-full max-w-52 m-auto bg-slate-400 rounded-sm border border-slate-400 text-white font-bold">Submit</button>
+        </form>
+        <div className="mt-3">
+          <span>Don't have an account? <a href="#" className="capitalize underline decoration-black font-thin text-black" target="_blank">register</a></span>
+        </div>
+      </div>
     </div>
   );
 }
